@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 
 # Builder stage
 # Install pnpm globally and add libc6-compat for Next.js compatibility on Alpine
-RUN npm install -g pnpm && \
+RUN npm install -g pnpm@10 && \
     apk add --no-cache libc6-compat
 WORKDIR /app
 
